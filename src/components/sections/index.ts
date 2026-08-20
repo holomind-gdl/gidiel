@@ -1,0 +1,10 @@
+export { default as Navbar } from "./navbar";
+export { default as Hero } from "./hero";
+export { default as BrandMarquee } from "./brand-marquee";
+export { default as Services } from "./services";
+export { default as Work } from "./work";
+export { default as Process } from "./process";
+export { default as About } from "./about";
+export { default as Testimonials } from "./testimonials";
+export { default as Contact } from "./contact";
+export { default as Footer } from "./footer";

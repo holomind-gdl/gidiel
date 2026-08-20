@@ -1,0 +1,168 @@
+{
+  "nav": {
+    "services": "Services",
+    "work": "Work",
+    "process": "Process",
+    "about": "About",
+    "contact": "Contact",
+    "cta": "Start a campaign",
+    "langLabel": "EN",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "selectLanguage": "Select language"
+  },
+  "marquee": {
+    "label": "Trusted by leading beauty brands"
+  },
+  "hero": {
+    "eyebrow": "Cosmetics promotion & brand activation",
+    "title": "We make beauty impossible to ignore.",
+    "subtitle": "GiDieL is a promotion studio for cosmetics brands. From product launches to in-store activations and influencer campaigns, we turn shelves into stories and browsers into buyers.",
+    "ctaPrimary": "Plan your campaign",
+    "ctaSecondary": "See our work",
+    "stat1": { "value": "120+", "label": "Campaigns run" },
+    "stat2": { "value": "38", "label": "Beauty brands" },
+    "stat3": { "value": "4.9x", "label": "Avg. ROI" },
+    "launchLift": "Launch lift"
+  },
+  "badges": {
+    "label": "Recognition",
+    "items": [
+      { "title": "Agency of the Year", "subtitle": "Beauty Promotion, 2025" },
+      { "title": "4× Webby Nominee", "subtitle": "Campaign craft & film" },
+      { "title": "4.9/5 client rating", "subtitle": "40+ verified reviews" }
+    ]
+  },
+  "services": {
+    "eyebrow": "What we do",
+    "title": "Promotion, end to end.",
+    "subtitle": "Every service is built around one goal: moving your cosmetics off the shelf and into baskets. Pick a single activation or let us run the whole campaign.",
+    "items": [
+      { "title": "Product Launches", "description": "Full-funnel launch campaigns that put your new SKU in every hand and feed." },
+      { "title": "In-Store Activation", "description": "Beauty counters, pop-ups, and sampling events that convert foot traffic." },
+      { "title": "Influencer Seeding", "description": "Curated creator partnerships across beauty, skincare, and fragrance niches." },
+      { "title": "Content Production", "description": "Editorial photography and video assets built for social and retail alike." },
+      { "title": "Gifting & PR Stunts", "description": "Unboxable press kits and buzz-worthy moments editors actually post." },
+      { "title": "Campaign Analytics", "description": "Attribution from impression to shelf, with clear ROI per activation." },
+      { "title": "Import / Export to Israel", "description": "Full import-export management for cosmetics in Israel — customs, compliance, certification, and shelf placement." },
+      { "title": "Turnkey Personal Brand", "description": "From formula development in world-class labs to your spec, through production and logistics — your own beauty brand, ready to sell." }
+    ],
+    "learnMore": "Learn more"
+  },
+  "work": {
+    "eyebrow": "Selected work",
+    "title": "Campaigns that sold.",
+    "subtitle": "A snapshot of recent activations across fragrance, colour, and skincare.",
+    "categories": {
+      "launch": "Launch",
+      "activation": "Activation",
+      "influencer": "Influencer",
+      "content": "Content",
+      "importExport": "Import/Export",
+      "turnkeyBrand": "Turnkey Brand"
+    }
+  },
+  "caseStudy": {
+    "eyebrow": "Case study",
+    "challenge": "The challenge",
+    "approach": "What we did",
+    "results": "Results",
+    "client": "Client",
+    "year": "Year",
+    "backToWork": "Back to all work",
+    "nextProject": "Next project",
+    "startCampaign": "Start a campaign"
+  },
+  "process": {
+    "eyebrow": "How we work",
+    "title": "A clear path from brief to shelf.",
+    "steps": [
+      { "number": "01", "title": "Discover", "description": "We dig into your brand, shelf position, and audience to find the angle that will move units." },
+      { "number": "02", "title": "Design", "description": "Concept, creative direction, and a channel plan — from in-store to influencer to paid social." },
+      { "number": "03", "title": "Deploy", "description": "We produce assets, brief creators, and run activations with on-the-ground teams." },
+      { "number": "04", "title": "Measure", "description": "Attribution and reporting tied to sell-through, so you know exactly what worked." }
+    ]
+  },
+  "about": {
+    "eyebrow": "About GiDieL",
+    "title": "A promotion studio built for cosmetics.",
+    "subtitle": "We started GiDieL because beauty brands deserve promotion that understands the counter, the creator, and the customer. For a decade we've helped colour, skincare, and fragrance labels launch, relaunch, and sell through.",
+    "stats": { "years": "10 yrs", "yearsLabel": "in beauty retail" },
+    "pillars": [
+      { "title": "Beauty-first thinking", "description": "We treat every campaign like an editorial. Aesthetics are not a layer — they are the strategy." },
+      { "title": "Shelf-obsessed", "description": "Impressions are nice. Sell-through is the metric we optimise for, every single time." },
+      { "title": "Embedded partnership", "description": "We work like an in-house promo team, not an outside vendor handing over a deck." }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Client voices",
+    "title": "Brands that trust GiDieL.",
+    "previous": "Previous testimonial",
+    "next": "Next testimonial",
+    "slideLabel": "Go to testimonial {number}",
+    "items": [
+      { "quote": "GiDieL turned our spring launch into the best-selling SKU of the quarter. The in-store activation alone paid for the whole campaign.", "author": "Camille Fournier", "role": "VP Marketing, Maison Rouge" },
+      { "quote": "They understand beauty retail like no agency we've worked with. Every detail — from the press kit to the counter design — felt editorial.", "author": "Daria Kowalski", "role": "Founder, Aurora Skin" },
+      { "quote": "Our influencer wave hit 8 million impressions and the sell-through followed. GiDieL is now our default promotion partner.", "author": "Inès Bouvier", "role": "Brand Director, Velveté" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Start a campaign",
+    "title": "Let's make your next launch the one they remember.",
+    "subtitle": "Tell us about your brand and what you're launching. We'll come back within two business days with a tailored promotion plan.",
+    "benefits": [
+      "Free 30-minute strategy call",
+      "No long-term retainer required",
+      "Tailored to colour, skincare, or fragrance"
+    ],
+    "form": {
+      "nameLabel": "Name *",
+      "namePlaceholder": "Jane Doe",
+      "emailLabel": "Email *",
+      "emailPlaceholder": "jane@brand.com",
+      "companyLabel": "Company",
+      "companyPlaceholder": "Maison Rouge",
+      "budgetLabel": "Budget",
+      "budgetPlaceholder": "Select range",
+      "budgetOptions": [
+        { "value": "under-10k", "label": "Under €10k" },
+        { "value": "10k-25k", "label": "€10k – €25k" },
+        { "value": "25k-50k", "label": "€25k – €50k" },
+        { "value": "50k-100k", "label": "€50k – €100k" },
+        { "value": "100k+", "label": "€100k+" }
+      ],
+      "messageLabel": "Tell us about your campaign *",
+      "messagePlaceholder": "We're launching a new lip collection this spring and want in-store + influencer support...",
+      "submitIdle": "Send brief",
+      "submitLoading": "Sending...",
+      "submitSuccess": "Brief sent!",
+      "successMessage": "Thanks! We'll get back to you within 2 business days.",
+      "errorMessage": "Something went wrong. Please try again.",
+      "reassurance": "Prefer email? We usually reply within 2 business days.",
+      "emailFallback": "Email us directly"
+    }
+  },
+  "footer": {
+    "tagline": "A promotion studio for cosmetics brands. We make beauty impossible to ignore.",
+    "servicesHeader": "Services",
+    "companyHeader": "Company",
+    "connectHeader": "Connect",
+    "services": [
+      "Product Launches",
+      "In-Store Activation",
+      "Influencer Seeding",
+      "Content Production",
+      "Import/Export Israel",
+      "Turnkey Brand"
+    ],
+    "company": ["About", "Work", "Process", "Contact"],
+    "connect": [
+      { "label": "Instagram", "abbr": "IG" },
+      { "label": "LinkedIn", "abbr": "LI" },
+      { "label": "hello@gidiel.studio", "icon": "mail" },
+      { "label": "Paris · Milan · Tel Aviv", "icon": "map" }
+    ],
+    "copyright": "© 2026 GiDieL Studio. All rights reserved.",
+    "locations": "Paris · Milan · Tel Aviv · Worldwide"
+  }
+}

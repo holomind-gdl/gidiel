@@ -1,0 +1,1 @@
+export { LOCALES, LOCALE_LABELS, LOCALE_DIR, DEFAULT_LOCALE } from "./types";
