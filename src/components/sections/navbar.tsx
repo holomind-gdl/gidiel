@@ -26,14 +26,21 @@ export default function Navbar() {
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-10 lg:py-4">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-5">
           <Link href="/#top" aria-label="GiDieL home">
             <Logo />
           </Link>
-          {/* Mobile-only compact icon buttons */}
-          <div className="flex items-center gap-1.5 md:hidden">
+          {/* Mobile-only compact icon buttons, spaced by half button width */}
+          <div className="flex items-center gap-5 md:hidden">
             <LanguageSwitcher iconOnly />
             <ThemeToggle />
+            <Link
+              href="/#contact"
+              aria-label={t("nav.cta")}
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-ink-900/10 text-sm font-semibold text-ink-900"
+            >
+              S
+            </Link>
           </div>
         </div>
 
@@ -91,15 +98,6 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-          <li>
-            <Link
-              href="/#contact"
-              className="block rounded-lg px-3 py-3 text-base font-medium text-ink-700 transition-colors hover:bg-ink-100 hover:text-rose-500"
-              onClick={() => setMobileOpen(false)}
-            >
-              {t("nav.cta")}
-            </Link>
-          </li>
         </ul>
       </div>
     </header>
