@@ -53,19 +53,19 @@
 }
 
 :root {
-  --background: #f7f5f3;
-  --foreground: #1c1813;
-  --ink-50: #f7f5f3;
-  --ink-100: #ece7e2;
-  --ink-200: #d8cfc6;
-  --ink-300: #b8a99c;
-  --ink-400: #937f6d;
-  --ink-500: #5b4b3c;
-  --ink-600: #453a2f;
-  --ink-700: #2f2820;
-  --ink-800: #2f2820;
-  --ink-900: #1c1813;
-  --ink-950: #100d0a;
+  --background: #100d0a;
+  --foreground: #f7f5f3;
+  --ink-50: #1c1813;
+  --ink-100: #2f2820;
+  --ink-200: #453a2f;
+  --ink-300: #5b4b3c;
+  --ink-400: #74624f;
+  --ink-500: #937f6d;
+  --ink-600: #d4caba;
+  --ink-700: #e0d6c8;
+  --ink-800: #ece7e2;
+  --ink-900: #f7f5f3;
+  --ink-950: #ffffff;
   --rose-200: #f7cdc7;
   --rose-300: #f0aaa1;
   --rose-400: #e67d71;
@@ -75,18 +75,17 @@
   --gold-400: #cfa23f;
   --font-geist: "Geist", system-ui, sans-serif;
 
-  /* Body copy colour — sits between ink-600 and ink-700 for AA contrast on
-     the warm-cream background. Re-tuned per scheme below. */
-  --copy: #5b4b3c;
+  /* Body copy colour */
+  --copy: #d8cfc6;
 
   /* GiDieL brand mark + wordmark gradient stops */
-  --logo-gi-from: #4e9ebd;
-  --logo-gi-to: #8fd5e6;
-  --logo-di-from: #3e8eac;
-  --logo-di-to: #78c7dc;
-  --logo-el-from: #62b6d0;
-  --logo-el-to: #2b6f8c;
-  --logo-mark: #68b9d6;
+  --logo-gi-from: #94d6e8;
+  --logo-gi-to: #c2ecf3;
+  --logo-di-from: #88cce0;
+  --logo-di-to: #b6e2ec;
+  --logo-el-from: #a5dceb;
+  --logo-el-to: #6ec0d8;
+  --logo-mark: #8fcfdf;
 }
 
 @layer base {
@@ -282,29 +281,9 @@
   --_dark-copy: #d8cfc6;
 }
 
-html[data-theme="dark"] {
-  --background: var(--_dark-bg);
-  --foreground: var(--_dark-fg);
-  --ink-50: var(--_dark-ink-50);
-  --ink-100: var(--_dark-ink-100);
-  --ink-200: var(--_dark-ink-200);
-  --ink-300: var(--_dark-ink-300);
-  --ink-400: var(--_dark-ink-400);
-  --ink-500: var(--_dark-ink-500);
-  --ink-600: var(--_dark-ink-600);
-  --ink-700: var(--_dark-ink-700);
-  --ink-800: var(--_dark-ink-800);
-  --ink-900: var(--_dark-ink-900);
-  --ink-950: var(--_dark-ink-950);
-  --copy: var(--_dark-copy);
-  --logo-gi-from: #94d6e8;
-  --logo-gi-to: #c2ecf3;
-  --logo-di-from: #88cce0;
-  --logo-di-to: #b6e2ec;
-  --logo-el-from: #a5dceb;
-  --logo-el-to: #6ec0d8;
-  --logo-mark: #8fcfdf;
-}
+/* Dark is now the default in :root, so this block is intentionally empty.
+   Kept as a semantic marker for theme switching logic. */
+html[data-theme="dark"] {}
 
 html[data-theme="light"] {
   --background: #f7f5f3;
@@ -332,20 +311,21 @@ html[data-theme="light"] {
 
 @media (prefers-color-scheme: dark) {
   html:not([data-theme]) {
-    --background: var(--_dark-bg);
-    --foreground: var(--_dark-fg);
-    --ink-50: var(--_dark-ink-50);
-    --ink-100: var(--_dark-ink-100);
-    --ink-200: var(--_dark-ink-200);
-    --ink-300: var(--_dark-ink-300);
-    --ink-400: var(--_dark-ink-400);
-    --ink-500: var(--_dark-ink-500);
-    --ink-600: var(--_dark-ink-600);
-    --ink-700: var(--_dark-ink-700);
-    --ink-800: var(--_dark-ink-800);
-    --ink-900: var(--_dark-ink-900);
-    --ink-950: var(--_dark-ink-950);
-    --copy: var(--_dark-copy);
+    /* Dark is already the :root default; kept for explicit system-dark preference */
+    --background: #100d0a;
+    --foreground: #f7f5f3;
+    --ink-50: #1c1813;
+    --ink-100: #2f2820;
+    --ink-200: #453a2f;
+    --ink-300: #5b4b3c;
+    --ink-400: #74624f;
+    --ink-500: #937f6d;
+    --ink-600: #d4caba;
+    --ink-700: #e0d6c8;
+    --ink-800: #ece7e2;
+    --ink-900: #f7f5f3;
+    --ink-950: #ffffff;
+    --copy: #d8cfc6;
     --logo-gi-from: #94d6e8;
     --logo-gi-to: #c2ecf3;
     --logo-di-from: #88cce0;
@@ -356,23 +336,46 @@ html[data-theme="light"] {
   }
 }
 
-@layer utilities {
-  .panel-soft {
-    background-image: linear-gradient(to bottom, #ece7e2, #f7f5f3);
+@media (prefers-color-scheme: light) {
+  html:not([data-theme]) {
+    --background: #f7f5f3;
+    --foreground: #1c1813;
+    --ink-50: #f7f5f3;
+    --ink-100: #ece7e2;
+    --ink-200: #d8cfc6;
+    --ink-300: #b8a99c;
+    --ink-400: #937f6d;
+    --ink-500: #5b4b3c;
+    --ink-600: #453a2f;
+    --ink-700: #2f2820;
+    --ink-800: #2f2820;
+    --ink-900: #1c1813;
+    --ink-950: #100d0a;
+    --copy: #5b4b3c;
+    --logo-gi-from: #4e9ebd;
+    --logo-gi-to: #8fd5e6;
+    --logo-di-from: #3e8eac;
+    --logo-di-to: #78c7dc;
+    --logo-el-from: #62b6d0;
+    --logo-el-to: #2b6f8c;
+    --logo-mark: #68b9d6;
   }
 }
 
-/* Dark overrides — outside @layer so they beat Tailwind utilities */
-html[data-theme="dark"] .panel-soft {
-  background-image: linear-gradient(to bottom, #1c1813, #100d0a);
-}
-@media (prefers-color-scheme: dark) {
-  html:not([data-theme]) .panel-soft {
+@layer utilities {
+  .panel-soft {
     background-image: linear-gradient(to bottom, #1c1813, #100d0a);
   }
 }
+
+/* Light overrides — outside @layer so they beat Tailwind utilities */
 html[data-theme="light"] .panel-soft {
   background-image: linear-gradient(to bottom, #ece7e2, #f7f5f3);
+}
+@media (prefers-color-scheme: light) {
+  html:not([data-theme]) .panel-soft {
+    background-image: linear-gradient(to bottom, #ece7e2, #f7f5f3);
+  }
 }
 html[data-theme="dark"] .bg-white,
 html[data-theme="dark"] [class*="bg-white/"]:not([class*="bg-white/0"]) {

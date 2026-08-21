@@ -110,7 +110,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   // theme-aware imagery) re-renders into agreement.
   useEffect(() => {
     const persisted = readPersistedChoice();
-    const next: ThemeChoice = persisted ?? "system";
+    const next: ThemeChoice = persisted ?? "dark";
     const r = resolveTheme(next);
     // eslint-disable-next-line react-hooks/set-state-in-effect -- intentional hydration step; see LanguageContext
     setChoiceState(next);
