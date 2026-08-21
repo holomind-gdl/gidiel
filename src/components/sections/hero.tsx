@@ -103,13 +103,14 @@ export default function Hero() {
             <motion.div style={{ y: imageY }} className="relative">
               <div className="relative z-10">
                 <Image
-                  src="/images/hero/model.svg"
+                  src="/images/hero/model.jpg"
                   alt="Model wearing bold cosmetics"
                   width={600}
                   height={750}
                   className="aspect-[4/5] w-full max-w-md mx-auto object-cover rounded-2xl"
                   priority
                 />
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-ink-950/70 via-ink-950/30 to-transparent" />
               </div>
               <div className="hidden sm:block absolute top-1/2 -end-4 z-20">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
