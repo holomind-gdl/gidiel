@@ -14,117 +14,113 @@
     </linearGradient>
   </defs>
 
-  <!-- Bold statement silhouette - beauty that commands attention -->
+  <!-- Soft halo background -->
+  <circle cx="300" cy="340" r="240" fill="none" stroke="url(#grad)" stroke-width="0.5" opacity="0.2"/>
 
-  <!-- Dramatic flowing hair - wild, free, impossible to ignore -->
-  <g fill="none" stroke="url(#hair)" stroke-width="3" stroke-linecap="round" opacity="0.9">
-    <!-- Main hair mass left -->
-    <path d="M140 200 Q100 280 110 380 Q120 480 140 560 Q160 640 180 720"/>
-    <!-- Main hair mass right -->
-    <path d="M460 200 Q500 280 490 380 Q480 480 460 560 Q440 640 420 720"/>
-    <!-- Hair volume top -->
-    <path d="M200 180 Q260 140 300 130 Q340 140 400 180"/>
-    <!-- Flowing strands left -->
-    <path d="M160 220 Q130 300 140 400 Q150 500 170 600" stroke-width="2.5"/>
-    <path d="M180 210 Q150 290 160 390 Q170 490 190 590" stroke-width="2"/>
-    <path d="M200 200 Q175 280 185 380 Q195 480 210 580" stroke-width="1.8"/>
-    <!-- Flowing strands right -->
-    <path d="M440 220 Q470 300 460 400 Q450 500 430 600" stroke-width="2.5"/>
-    <path d="M420 210 Q450 290 440 390 Q430 490 410 590" stroke-width="2"/>
-    <path d="M400 200 Q425 280 415 380 Q405 480 390 580" stroke-width="1.8"/>
-    <!-- Top texture -->
-    <path d="M220 160 Q260 140 300 135 Q340 140 380 160" stroke-width="2"/>
-    <path d="M240 150 Q280 130 300 125 Q320 130 360 150" stroke-width="1.5"/>
+  <!-- Hair flowing behind - soft strands -->
+  <g fill="none" stroke="url(#hair)" stroke-width="1.8" stroke-linecap="round" opacity="0.7">
+    <path d="M220 260 Q200 340 205 420 Q210 500 230 560"/>
+    <path d="M230 250 Q215 330 220 410 Q225 490 240 550"/>
+    <path d="M240 245 Q230 320 235 400 Q240 480 250 540"/>
+    <path d="M380 260 Q400 340 395 420 Q390 500 370 560"/>
+    <path d="M370 250 Q385 330 380 410 Q375 490 360 550"/>
+    <path d="M360 245 Q370 320 365 400 Q360 480 350 540"/>
   </g>
 
-  <!-- Face - bold, confident, striking features -->
-  <g fill="none" stroke="url(#skin)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Strong jawline -->
-    <path d="M220 380 Q200 440 220 500 Q250 540 300 550 Q350 540 380 500 Q400 440 380 380"/>
-    <!-- High cheekbones -->
-    <path d="M220 380 Q200 420 210 460"/>
-    <path d="M380 380 Q400 420 390 460"/>
-    <!-- Bold brow ridge -->
-    <path d="M220 340 Q250 320 280 330"/>
-    <path d="M320 330 Q350 320 380 340"/>
-    <!-- Strong nose -->
-    <path d="M300 330 Q290 370 280 400 Q275 415 285 420"/>
-    <path d="M285 420 Q300 425 315 420"/>
-    <!-- Full lips - statement -->
-    <path d="M260 460 Q280 450 300 455 Q320 450 340 460" stroke-width="2.5"/>
-    <path d="M265 462 Q300 475 335 462" stroke-width="2"/>
-    <!-- Chin definition -->
-    <path d="M300 550 Q310 560 300 570"/>
+  <!-- Neck and shoulders - graceful -->
+  <g fill="none" stroke="url(#skin)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M270 520 Q275 560 280 600"/>
+    <path d="M330 520 Q325 560 320 600"/>
+    <path d="M220 610 Q270 590 280 600 Q300 610 320 600 Q330 590 380 610"/>
+    <path d="M180 620 Q220 590 270 620"/>
+    <path d="M420 620 Q380 590 330 620"/>
   </g>
 
-  <!-- Bold eyes - impossible to ignore -->
-  <g fill="none" stroke="url(#skin)" stroke-width="2" stroke-linecap="round">
-    <!-- Left eye - almond shape -->
-    <path d="M235 365 Q255 352 275 365"/>
-    <path d="M240 367 Q255 358 270 367"/>
-    <!-- Bold lashes -->
-    <path d="M235 365 Q228 355 222 345" stroke-width="2.5"/>
-    <path d="M242 363 Q237 352 235 342" stroke-width="2"/>
-    <path d="M252 360 Q250 349 252 339" stroke-width="1.8"/>
-    <!-- Iris -->
-    <circle cx="255" cy="367" r="5" fill="url(#skin)" opacity="0.4"/>
-    <circle cx="255" cy="367" r="2.5" fill="url(#hair)" opacity="0.7"/>
-
-    <!-- Right eye - almond shape -->
-    <path d="M325 365 Q345 352 365 365"/>
-    <path d="M330 367 Q345 358 360 367"/>
-    <!-- Bold lashes -->
-    <path d="M365 365 Q372 355 378 345" stroke-width="2.5"/>
-    <path d="M358 363 Q363 352 365 342" stroke-width="2"/>
-    <path d="M348 360 Q350 349 348 339" stroke-width="1.8"/>
-    <!-- Iris -->
-    <circle cx="345" cy="367" r="5" fill="url(#skin)" opacity="0.4"/>
-    <circle cx="345" cy="367" r="2.5" fill="url(#hair)" opacity="0.7"/>
+  <!-- Face - elegant profile, closed eyes -->
+  <g fill="none" stroke="url(#skin)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Forehead -->
+    <path d="M300 210 Q340 230 360 260 Q370 285 365 310"/>
+    <!-- Brow -->
+    <path d="M360 310 Q355 322 350 332"/>
+    <!-- Nose bridge -->
+    <path d="M350 332 Q340 358 330 380 Q320 398 310 405"/>
+    <!-- Nose tip -->
+    <path d="M310 405 Q300 410 290 405 Q285 400 288 393"/>
+    <!-- Philtrum -->
+    <path d="M288 393 Q292 415 300 430"/>
+    <!-- Upper lip -->
+    <path d="M300 430 Q312 426 325 430 Q330 434 327 438"/>
+    <!-- Lower lip -->
+    <path d="M327 438 Q318 446 300 448 Q282 446 273 438"/>
+    <!-- Lip line -->
+    <path d="M273 438 Q300 433 327 438"/>
+    <!-- Chin -->
+    <path d="M273 438 Q265 455 270 475 Q280 495 300 500"/>
+    <!-- Jaw line -->
+    <path d="M300 500 Q330 495 350 475 Q365 455 370 430"/>
+    <!-- Cheekbone -->
+    <path d="M365 310 Q380 340 370 370 Q360 390 350 410"/>
   </g>
 
-  <!-- Bold eyebrows - strong arch -->
-  <g fill="none" stroke="url(#hair)" stroke-width="2.2" stroke-linecap="round">
-    <path d="M225 340 Q255 322 285 335"/>
-    <path d="M228 345 Q255 330 282 340"/>
-    <path d="M315 335 Q345 322 375 340"/>
-    <path d="M318 340 Q345 330 372 345"/>
+  <!-- Closed eyes - peaceful, elegant -->
+  <g fill="none" stroke="url(#skin)" stroke-width="1.5" stroke-linecap="round">
+    <!-- Left eye - closed, soft line -->
+    <path d="M338 355 Q350 348 362 355"/>
+    <path d="M342 357 Q350 351 358 357"/>
+    <!-- Soft lashes -->
+    <path d="M338 355 Q334 350 332 344" stroke-width="1.2"/>
+    <path d="M345 353 Q343 347 343 341" stroke-width="1.2"/>
+    <path d="M355 353 Q356 347 356 341" stroke-width="1.2"/>
+    <path d="M362 355 Q366 350 368 344" stroke-width="1.2"/>
+
+    <!-- Right eye - closed, soft line -->
+    <path d="M238 355 Q250 348 262 355"/>
+    <path d="M242 357 Q250 351 258 357"/>
+    <!-- Soft lashes -->
+    <path d="M238 355 Q234 350 232 344" stroke-width="1.2"/>
+    <path d="M245 353 Q243 347 243 341" stroke-width="1.2"/>
+    <path d="M255 353 Q256 347 256 341" stroke-width="1.2"/>
+    <path d="M262 355 Q266 350 268 344" stroke-width="1.2"/>
   </g>
 
-  <!-- Neck and shoulders - elegant posture -->
-  <g fill="none" stroke="url(#skin)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <!-- Neck -->
-    <path d="M270 550 Q275 600 280 650"/>
-    <path d="M330 550 Q325 600 320 650"/>
-    <!-- Shoulders - strong line -->
-    <path d="M150 680 Q200 650 270 650"/>
-    <path d="M450 680 Q400 650 330 650"/>
-    <!-- Collarbone hint -->
-    <path d="M220 660 Q300 680 380 660"/>
+  <!-- Eyebrows - soft, natural arch -->
+  <g fill="none" stroke="url(#hair)" stroke-width="1.4" stroke-linecap="round">
+    <path d="M232 335 Q250 322 270 330"/>
+    <path d="M330 330 Q350 322 368 335"/>
   </g>
 
-  <!-- Dramatic flowing lines - hair and fabric -->
-  <g fill="none" stroke="url(#hair)" stroke-width="2" stroke-linecap="round" opacity="0.7">
-    <path d="M140 560 Q120 620 130 680 Q140 740 120 750"/>
-    <path d="M460 560 Q480 620 470 680 Q460 740 480 750"/>
-    <path d="M160 580 Q140 640 150 700 Q160 740 140 750"/>
-    <path d="M440 580 Q460 640 450 700 Q440 740 460 750"/>
+  <!-- Hair front - soft flowing strands -->
+  <g fill="none" stroke="url(#hair)" stroke-width="1.8" stroke-linecap="round">
+    <!-- Hairline -->
+    <path d="M250 250 Q270 210 300 200 Q330 210 350 250 Q370 280 380 320"/>
+    <!-- Volume -->
+    <path d="M270 220 Q290 190 320 200 Q340 210 330 240"/>
+    <path d="M290 205 Q310 185 330 200 Q345 215 335 245"/>
+    <!-- Flowing right -->
+    <path d="M380 320 Q390 360 395 400 Q398 440 390 480" stroke-width="1.6"/>
+    <path d="M375 330 Q385 370 388 410 Q390 450 385 490" stroke-width="1.4"/>
+    <!-- Flowing left -->
+    <path d="M250 250 Q240 290 238 330 Q236 370 240 410" stroke-width="1.6"/>
+    <path d="M255 260 Q248 300 247 340 Q246 380 250 420" stroke-width="1.4"/>
+    <!-- Soft wisps -->
+    <path d="M300 200 Q295 240 298 280 Q302 320 310 360" stroke-width="1.3" opacity="0.8"/>
+    <path d="M320 205 Q325 245 322 285 Q318 325 310 365" stroke-width="1.3" opacity="0.7"/>
   </g>
 
-  <!-- Abstract beauty rays - radiating confidence -->
-  <g fill="none" stroke="url(#grad)" stroke-width="1.2" opacity="0.4">
-    <line x1="300" y1="100" x2="300" y2="60"/>
-    <line x1="250" y1="110" x2="220" y2="80"/>
-    <line x1="350" y1="110" x2="380" y2="80"/>
-    <line x1="200" y1="140" x2="160" y2="120"/>
-    <line x1="400" y1="140" x2="440" y2="120"/>
+  <!-- Decorative sketch accents -->
+  <g fill="none" stroke="url(#skin)" stroke-width="0.8" opacity="0.3">
+    <path d="M150 340 Q140 380 150 420"/>
+    <path d="M450 340 Q460 380 450 420"/>
+    <path d="M170 500 Q190 520 210 510"/>
+    <path d="M430 500 Q410 520 390 510"/>
   </g>
 
   <!-- Accent points -->
-  <g fill="#d85a4b" opacity="0.6">
-    <circle cx="300" cy="125" r="4"/>
-    <circle cx="255" cy="367" r="3"/>
-    <circle cx="345" cy="367" r="3"/>
-    <circle cx="300" cy="455" r="3"/>
-    <circle cx="300" cy="550" r="3.5"/>
+  <g fill="#d85a4b" opacity="0.45">
+    <circle cx="300" cy="195" r="3"/>
+    <circle cx="350" cy="355" r="2"/>
+    <circle cx="250" cy="355" r="2"/>
+    <circle cx="300" cy="448" r="2"/>
+    <circle cx="300" cy="500" r="2.5"/>
   </g>
 </svg>
