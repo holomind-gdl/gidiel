@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useTranslation } from "@/context/LanguageContext";
 import LanguageSwitcher from "@/components/ui/LanguageSwitcher";
 import ThemeToggle from "@/components/ui/ThemeToggle";
@@ -44,8 +44,6 @@ export default function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2 md:gap-3">
-          {/* On desktop: show Lang + Theme + CTA + Hamburger is hidden */}
-          {/* On mobile: show only Hamburger (Lang + Theme moved into menu) */}
           <div className="hidden md:flex items-center gap-3">
             <LanguageSwitcher />
             <ThemeToggle />
@@ -101,17 +99,6 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-
-      {!mobileOpen && (
-        <Link
-          href="/#contact"
-          className="fixed inset-x-4 bottom-4 z-40 inline-flex items-center justify-center gap-1.5 rounded-full btn-ink px-4 py-2.5 text-xs font-medium btn-ink-shadow md:hidden"
-          style={{ bottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
-        >
-          {t("nav.cta")}
-          <ArrowRight className="h-3.5 w-3.5 rtl:rotate-180" />
-        </Link>
-      )}
     </header>
   );
 }
