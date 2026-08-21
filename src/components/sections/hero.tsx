@@ -111,15 +111,6 @@ export default function Hero() {
                   priority
                 />
               </div>
-              <div className="hidden sm:block absolute -bottom-6 -start-6 z-20">
-                <Image
-                  src="/images/hero/lipstick.svg"
-                  alt="Pink lipstick on vanity"
-                  width={200}
-                  height={200}
-                  className="aspect-square w-40 object-cover rounded-2xl shadow-xl"
-                />
-              </div>
               <div className="hidden sm:block absolute top-1/2 -end-4 z-20">
                 <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg">
                   <p className="text-2xl font-semibold text-ink-900 font-serif leading-none">+212%</p>
