@@ -25,51 +25,27 @@ export default function Navbar() {
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 bg-ink-50/90 backdrop-blur-md md:backdrop-blur-xl border-b border-ink-100/50`}
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-10 lg:py-4">
-        <div className="flex items-center gap-5">
+      <nav className="mx-auto flex max-w-7xl items-center px-4 py-3 lg:px-10 lg:py-4">
+        {/* Mobile: equal spacing between logo and all icon buttons */}
+        <div className="flex items-center w-full md:hidden">
           <Link href="/#top" aria-label="GiDieL home">
             <Logo />
           </Link>
-          {/* Mobile-only compact icon buttons, same visual style and spacing */}
-          <div className="flex items-center gap-5 md:hidden">
-            <LanguageSwitcher iconOnly />
-            <ThemeToggle />
-            <Link
-              href="/#contact"
-              aria-label={t("nav.cta")}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500"
-            >
-              <span className="text-sm font-semibold">S</span>
-            </Link>
-          </div>
-        </div>
-
-        <ul className="hidden list-none items-center gap-9 p-0 m-0 md:flex">
-          {NAV_KEYS.map((link) => (
-            <li key={link.href} className="flex items-center">
-              <Link
-                href={link.href}
-                className="text-sm font-medium text-ink-700 transition-colors hover:text-rose-500"
-              >
-                {t(link.key)}
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex items-center gap-2 md:gap-3">
-          <div className="hidden md:flex items-center gap-3">
-            <LanguageSwitcher />
-            <ThemeToggle />
-          </div>
+          <div className="flex-1" />
+          <LanguageSwitcher iconOnly />
+          <div className="flex-1" />
+          <ThemeToggle />
+          <div className="flex-1" />
           <Link
             href="/#contact"
-            className="hidden rounded-full border border-ink-200 px-5 py-2.5 text-sm font-semibold text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500 min-h-[44px] md:inline-block"
+            aria-label={t("nav.cta")}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500"
           >
-            {t("nav.cta")}
+            <span className="text-sm font-semibold">S</span>
           </Link>
+          <div className="flex-1" />
           <button
-            className="md:hidden flex items-center justify-center h-10 w-10 rounded-full border border-ink-200 text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500"
+            className="flex items-center justify-center h-10 w-10 rounded-full border border-ink-200 text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500"
             aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
@@ -77,6 +53,35 @@ export default function Navbar() {
           >
             {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
+        </div>
+
+        {/* Desktop */}
+        <div className="hidden md:flex items-center justify-between w-full">
+          <Link href="/#top" aria-label="GiDieL home">
+            <Logo />
+          </Link>
+          <ul className="list-none items-center gap-9 p-0 m-0 flex">
+            {NAV_KEYS.map((link) => (
+              <li key={link.href} className="flex items-center">
+                <Link
+                  href={link.href}
+                  className="text-sm font-medium text-ink-700 transition-colors hover:text-rose-500"
+                >
+                  {t(link.key)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <div className="flex items-center gap-3">
+            <LanguageSwitcher />
+            <ThemeToggle />
+            <Link
+              href="/#contact"
+              className="rounded-full border border-ink-200 px-5 py-2.5 text-sm font-semibold text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500 min-h-[44px]"
+            >
+              {t("nav.cta")}
+            </Link>
+          </div>
         </div>
       </nav>
 
