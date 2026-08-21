@@ -30,16 +30,16 @@ export default function Navbar() {
           <Link href="/#top" aria-label="GiDieL home">
             <Logo />
           </Link>
-          {/* Mobile-only compact icon buttons, spaced by half button width */}
+          {/* Mobile-only compact icon buttons, same visual style and spacing */}
           <div className="flex items-center gap-5 md:hidden">
             <LanguageSwitcher iconOnly />
             <ThemeToggle />
             <Link
               href="/#contact"
               aria-label={t("nav.cta")}
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-ink-900/10 text-sm font-semibold text-ink-900"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500"
             >
-              S
+              <span className="text-sm font-semibold">S</span>
             </Link>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function Navbar() {
             {t("nav.cta")}
           </Link>
           <button
-            className="md:hidden flex items-center justify-center h-10 w-10 rounded-full bg-ink-900/10 text-ink-900"
+            className="md:hidden flex items-center justify-center h-10 w-10 rounded-full border border-ink-200 text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500"
             aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
