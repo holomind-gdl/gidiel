@@ -53,7 +53,7 @@ export default function Navbar() {
             {t("nav.cta")}
           </Link>
           <button
-            className="md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] text-ink-900"
+            className="md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] rounded-full bg-ink-900/10 text-ink-900"
             aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
@@ -66,8 +66,8 @@ export default function Navbar() {
 
       <div
         id="mobile-menu"
-        className={`overflow-hidden bg-ink-50/90 backdrop-blur-xl transition-all duration-300 md:hidden border-b border-ink-100/50 ${
-          mobileOpen ? "max-h-96" : "max-h-0"
+        className={`overflow-hidden bg-ink-50/95 backdrop-blur-xl transition-all duration-300 md:hidden border-b border-ink-100/50 ${
+          mobileOpen ? "max-h-[500px]" : "max-h-0"
         }`}
       >
         <ul className="flex flex-col gap-1 px-6 py-4">
@@ -82,6 +82,10 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
+          <li className="pt-2 flex flex-col gap-2">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </li>
           <li>
             <Link
               href="/#contact"
