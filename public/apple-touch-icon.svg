@@ -9,10 +9,7 @@
       <stop offset="100%" stop-color="#4e9ebd"/>
     </linearGradient>
   </defs>
-  <!-- Background shape -->
   <rect x="4" y="4" width="56" height="56" rx="14" fill="url(#bg)"/>
-  <!-- Logo mark -->
   <path d="M48 20C43.5 12 35.5 10 28.5 13C21 16.5 18 23 20.5 28C23 33 30 35 35 32C40 29 41.5 22 38 18C35 14.5 29.5 15 26.5 18C23.5 21 24.5 26 28 28C31 30 34 29.5 36.5 27" fill="none" stroke="url(#mark)" stroke-width="3.5" stroke-linecap="round"/>
-  <!-- Text -->
   <text x="32" y="52" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" font-weight="800" fill="white">GD</text>
 </svg>
