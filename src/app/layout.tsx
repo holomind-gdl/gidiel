@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   description:
     "GiDieL crafts unforgettable cosmetics promotion campaigns — from product launches to in-store activations that make beauty brands sell.",
   icons: {
-    icon: "/favicon.svg",
+    icon: "/favicon.svg?v=4",
   },
 };
 
