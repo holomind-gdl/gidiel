@@ -103,7 +103,7 @@ export default function Hero() {
             <motion.div style={{ y: imageY }} className="relative">
               <div className="relative z-10">
                 <Image
-                  src="/images/hero/model.jpg?v=1"
+                  src="/images/hero/model.jpg"
                   alt="Model wearing bold cosmetics"
                   width={600}
                   height={750}
