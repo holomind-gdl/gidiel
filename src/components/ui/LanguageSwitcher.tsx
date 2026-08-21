@@ -7,7 +7,11 @@ import { LOCALE_LABELS, type Locale } from "@/lib/i18n/types";
 
 const LOCALES_LIST: Locale[] = ["en", "ru", "he"];
 
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({
+  iconOnly = false,
+}: {
+  iconOnly?: boolean;
+}) {
   const [open, setOpen] = useState(false);
   const { locale, setLocale, t } = useTranslation();
   const ref = useRef<HTMLDivElement>(null);
@@ -26,17 +30,25 @@ export default function LanguageSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen(!open)}
-        className="flex items-center gap-1.5 rounded-full border border-ink-200 px-3 py-2 text-xs font-semibold text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500 min-h-[44px]"
+        className={`flex items-center gap-1.5 rounded-full border border-ink-200 px-3 py-2 text-xs font-semibold text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500 min-h-[44px] ${
+          iconOnly ? "w-10 justify-center px-0" : ""
+        }`}
         aria-label={t("nav.selectLanguage")}
         aria-expanded={open}
       >
         <Globe className="h-4 w-4" />
-        {LOCALE_LABELS[locale]}
-        <ChevronDown className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`} />
+        {!iconOnly && (
+          <>
+            {LOCALE_LABELS[locale]}
+            <ChevronDown className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`} />
+          </>
+        )}
       </button>
 
       {open && (
-        <ul className="absolute end-0 mt-2 w-32 overflow-hidden rounded-xl border border-ink-200 bg-white shadow-lg z-50">
+        <ul className={`absolute bg-white border border-ink-200 rounded-xl shadow-lg z-50 overflow-hidden ${
+          iconOnly ? "end-0 mt-2 w-36" : "end-0 mt-2 w-32"
+        }`}>
           {LOCALES_LIST.map((loc) => (
             <li key={loc}>
               <button

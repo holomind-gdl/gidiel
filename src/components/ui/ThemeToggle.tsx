@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Sun, Moon, Monitor, ChevronDown } from "lucide-react";
+import { Sun, Moon, Monitor } from "lucide-react";
 import { useTheme } from "@/context/ThemeContext";
 
 const OPTS = [
@@ -37,13 +37,9 @@ export default function ThemeToggle() {
         aria-label={`Theme: ${current.label}`}
         aria-expanded={open}
         aria-haspopup="menu"
-        className="flex items-center gap-1.5 rounded-full border border-ink-200 px-3 py-2 text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500 min-h-[44px]"
+        className="flex items-center justify-center rounded-full border border-ink-200 px-3 py-2 text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500 min-h-[44px] w-10"
       >
         <CurrentIcon className="h-4 w-4" aria-hidden="true" />
-        <ChevronDown
-          className={`h-3 w-3 transition-transform ${open ? "rotate-180" : ""}`}
-          aria-hidden="true"
-        />
       </button>
 
       {open && (

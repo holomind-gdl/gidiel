@@ -26,9 +26,16 @@ export default function Navbar() {
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-10 lg:py-4">
-        <Link href="/#top" aria-label="GiDieL home">
-          <Logo />
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link href="/#top" aria-label="GiDieL home">
+            <Logo />
+          </Link>
+          {/* Mobile-only compact icon buttons */}
+          <div className="flex items-center gap-1.5 md:hidden">
+            <LanguageSwitcher iconOnly />
+            <ThemeToggle />
+          </div>
+        </div>
 
         <ul className="hidden list-none items-center gap-9 p-0 m-0 md:flex">
           {NAV_KEYS.map((link) => (
@@ -84,10 +91,6 @@ export default function Navbar() {
               </Link>
             </li>
           ))}
-          <li className="pt-2 flex flex-col gap-2">
-            <LanguageSwitcher />
-            <ThemeToggle />
-          </li>
           <li>
             <Link
               href="/#contact"
