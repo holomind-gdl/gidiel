@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useTranslation } from "@/context/LanguageContext";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
 
@@ -30,14 +31,15 @@ const steps = [
 
 export default function Process() {
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
 
   return (
     <Section id="process">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
+        initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: isMobile ? 0.3 : 0.6 }}
       >
         <SectionHeader
           eyebrow={t("process.eyebrow")}
@@ -49,10 +51,10 @@ export default function Process() {
         {steps.map((step, index) => (
           <motion.div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
+            initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: isMobile ? 0.3 : 0.5, delay: isMobile ? 0 : index * 0.1 }}
             className="group"
           >
             <p className="text-sm font-semibold text-ink-400 uppercase tracking-wider mb-4 tabular-nums">

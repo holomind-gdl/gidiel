@@ -1,11 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-
-const variants = {
-  hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0 },
-};
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function Section({
   id,
@@ -20,6 +16,7 @@ export default function Section({
   noAnimate?: boolean;
   bgGradient?: React.ReactNode;
 }) {
+  const isMobile = useIsMobile();
   const base = "section relative py-14 lg:py-20";
 
   if (noAnimate) {
@@ -37,6 +34,10 @@ export default function Section({
     );
   }
 
+  const variants = isMobile
+    ? { hidden: { opacity: 0 }, visible: { opacity: 1 } }
+    : { hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } };
+
   return (
     <motion.section
       id={id}
@@ -45,7 +46,7 @@ export default function Section({
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       variants={variants}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: isMobile ? 0.3 : 0.7, ease: isMobile ? undefined : [0.16, 1, 0.3, 1] }}
     >
       {bgGradient && (
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">

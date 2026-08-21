@@ -5,25 +5,31 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useTranslation } from "@/context/LanguageContext";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import StatBadge from "@/components/ui/StatBadge";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+const fadeUp = (isMobile: boolean) => ({
+  hidden: { opacity: 0, ...(isMobile ? {} : { y: 30 }) },
   visible: (i: number) => ({
     opacity: 1,
-    y: 0,
-    transition: { delay: i * 0.1, duration: 0.7, ease: [0.16, 1, 0.3, 1] as const },
+    ...(isMobile ? {} : { y: 0 }),
+    transition: {
+      delay: i * (isMobile ? 0.05 : 0.1),
+      duration: isMobile ? 0.4 : 0.7,
+      ease: isMobile ? undefined : ([0.16, 1, 0.3, 1] as const),
+    },
   }),
-};
+});
 
 export default function Hero() {
   const { t } = useTranslation();
+  const isMobile = useIsMobile();
   const heroRef = useRef<HTMLElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, 60]);
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, isMobile ? 0 : 60]);
 
   return (
     <section
@@ -35,7 +41,7 @@ export default function Hero() {
           <div className="max-w-xl">
             <motion.p
               custom={0}
-              variants={fadeUp}
+              variants={fadeUp(isMobile)}
               initial="hidden"
               animate="visible"
               className="text-sm font-medium text-ink-500 uppercase tracking-wider mb-4"
@@ -44,7 +50,7 @@ export default function Hero() {
             </motion.p>
             <motion.h1
               custom={1}
-              variants={fadeUp}
+              variants={fadeUp(isMobile)}
               initial="hidden"
               animate="visible"
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-ink-900 mb-6 text-balance leading-[1.05]"
@@ -53,7 +59,7 @@ export default function Hero() {
             </motion.h1>
             <motion.p
               custom={2}
-              variants={fadeUp}
+              variants={fadeUp(isMobile)}
               initial="hidden"
               animate="visible"
               className="text-lg text-ink-600 mb-8"
@@ -62,7 +68,7 @@ export default function Hero() {
             </motion.p>
             <motion.div
               custom={3}
-              variants={fadeUp}
+              variants={fadeUp(isMobile)}
               initial="hidden"
               animate="visible"
               className="flex flex-wrap gap-4 mb-12"
@@ -83,7 +89,7 @@ export default function Hero() {
             </motion.div>
             <motion.div
               custom={4}
-              variants={fadeUp}
+              variants={fadeUp(isMobile)}
               initial="hidden"
               animate="visible"
               className="flex gap-8"

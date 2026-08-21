@@ -8,6 +8,7 @@ import {
 } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/context/LanguageContext";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
 import TestimonialCard from "@/components/ui/TestimonialCard";
@@ -33,6 +34,7 @@ const testimonials = [
 export default function Testimonials() {
   const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(0);
+  const isMobile = useIsMobile();
   const active = testimonials[activeIndex];
 
   const move = (direction: 1 | -1) => {
@@ -72,17 +74,17 @@ export default function Testimonials() {
                 "{number}",
                 String(activeIndex + 1),
               )}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.15}
-              onDragEnd={handleDragEnd}
+              drag={isMobile ? false : "x"}
+              dragConstraints={isMobile ? undefined : { left: 0, right: 0 }}
+              dragElastic={isMobile ? 0 : 0.15}
+              onDragEnd={isMobile ? undefined : handleDragEnd}
               onKeyDown={(event) => {
                 if (event.key === "ArrowLeft") move(-1);
                 if (event.key === "ArrowRight") move(1);
               }}
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: isMobile ? 0 : 30 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -30 }}
+              exit={{ opacity: 0, x: isMobile ? 0 : -30 }}
               transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
               className="cursor-grab active:cursor-grabbing focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-4"
             >

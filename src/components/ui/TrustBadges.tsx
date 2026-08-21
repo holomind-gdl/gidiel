@@ -3,12 +3,14 @@
 import { motion } from "framer-motion";
 import { Trophy, Award, Star } from "lucide-react";
 import { useTranslation, useTranslationValue } from "@/context/LanguageContext";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 const icons = [Trophy, Award, Star];
 
 export default function TrustBadges() {
   const { t } = useTranslation();
   const getValue = useTranslationValue();
+  const isMobile = useIsMobile();
 
   const rawItems = getValue("badges.items");
   const badgeItems = Array.isArray(rawItems)
@@ -30,10 +32,10 @@ export default function TrustBadges() {
             return (
               <motion.div
                 key={item.title}
-                initial={{ opacity: 0, y: 16 }}
+                initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: isMobile ? 0.3 : 0.5, delay: isMobile ? 0 : i * 0.1 }}
                 className="flex items-center justify-center gap-4 rounded-2xl border border-ink-100 bg-white px-6 py-5"
               >
                 <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-rose-400 to-gold-400 text-white">

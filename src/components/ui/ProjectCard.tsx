@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function ProjectCard({
   title,
@@ -20,12 +21,14 @@ export default function ProjectCard({
   href: string;
   index?: number;
 }) {
+  const isMobile = useIsMobile();
+
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
+      initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
+      transition={{ duration: isMobile ? 0.3 : 0.5, delay: isMobile ? 0 : index * 0.08 }}
     >
       <Link href={href} className="group block">
         <div className="relative overflow-hidden rounded-2xl mb-4">

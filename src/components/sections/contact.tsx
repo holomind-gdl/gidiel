@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { useTranslation, useTranslationValue } from "@/context/LanguageContext";
+import { useIsMobile } from "@/hooks/useIsMobile";
 import Section from "@/components/ui/Section";
 import SectionHeader from "@/components/ui/SectionHeader";
 
@@ -13,6 +14,7 @@ export default function Contact() {
   >("idle");
   const { t } = useTranslation();
   const getValue = useTranslationValue();
+  const isMobile = useIsMobile();
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -50,10 +52,10 @@ export default function Contact() {
     <Section id="contact">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
+          initial={isMobile ? { opacity: 0 } : { opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: isMobile ? 0.3 : 0.6 }}
         >
           <SectionHeader
             eyebrow={t("contact.eyebrow")}
@@ -65,10 +67,10 @@ export default function Contact() {
             {(getValue("contact.benefits") as string[]).map((benefit, i) => (
               <motion.li
                 key={i}
-                initial={{ opacity: 0, x: -10 }}
+                initial={isMobile ? { opacity: 0 } : { opacity: 0, x: -10 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.1 * i }}
+                transition={{ duration: isMobile ? 0.3 : 0.4, delay: isMobile ? 0 : 0.1 * i }}
                 className="flex items-center gap-3 text-ink-700"
               >
                 <span className="h-1.5 w-1.5 rounded-full bg-rose-500" />
@@ -79,10 +81,10 @@ export default function Contact() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
+          initial={isMobile ? { opacity: 0 } : { opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: isMobile ? 0.3 : 0.6 }}
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid sm:grid-cols-2 gap-4">

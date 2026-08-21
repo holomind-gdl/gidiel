@@ -22,10 +22,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 bg-ink-50/80 backdrop-blur-xl border-b border-ink-100/50`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 bg-ink-50/90 backdrop-blur-md md:backdrop-blur-xl border-b border-ink-100/50`}
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-10 lg:py-4">
         <Link href="/#top" aria-label="GiDieL home">
           <Logo />
         </Link>
@@ -43,9 +43,13 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="flex items-center gap-3">
-          <LanguageSwitcher />
-          <ThemeToggle />
+        <div className="flex items-center gap-2 md:gap-3">
+          {/* On desktop: show Lang + Theme + CTA + Hamburger is hidden */}
+          {/* On mobile: show only Hamburger (Lang + Theme moved into menu) */}
+          <div className="hidden md:flex items-center gap-3">
+            <LanguageSwitcher />
+            <ThemeToggle />
+          </div>
           <Link
             href="/#contact"
             className="hidden rounded-full border border-ink-200 px-5 py-2.5 text-sm font-semibold text-ink-700 transition-colors hover:border-rose-400 hover:text-rose-500 min-h-[44px] md:inline-block"
@@ -53,13 +57,13 @@ export default function Navbar() {
             {t("nav.cta")}
           </Link>
           <button
-            className="md:hidden flex items-center justify-center min-h-[44px] min-w-[44px] rounded-full bg-ink-900/10 text-ink-900"
+            className="md:hidden flex items-center justify-center h-10 w-10 rounded-full bg-ink-900/10 text-ink-900"
             aria-label={mobileOpen ? t("nav.closeMenu") : t("nav.openMenu")}
             aria-expanded={mobileOpen}
             aria-controls="mobile-menu"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
-            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
         </div>
       </nav>
@@ -70,7 +74,7 @@ export default function Navbar() {
           mobileOpen ? "max-h-[500px]" : "max-h-0"
         }`}
       >
-        <ul className="flex flex-col gap-1 px-6 py-4">
+        <ul className="flex flex-col gap-1 px-4 py-4">
           {NAV_KEYS.map((link) => (
             <li key={link.href}>
               <Link
@@ -101,11 +105,11 @@ export default function Navbar() {
       {!mobileOpen && (
         <Link
           href="/#contact"
-          className="fixed inset-x-4 bottom-4 z-40 inline-flex items-center justify-center gap-2 rounded-full btn-ink px-5 py-3.5 text-sm font-medium btn-ink-shadow md:hidden"
-          style={{ bottom: "calc(1rem + env(safe-area-inset-bottom))" }}
+          className="fixed inset-x-4 bottom-4 z-40 inline-flex items-center justify-center gap-1.5 rounded-full btn-ink px-4 py-2.5 text-xs font-medium btn-ink-shadow md:hidden"
+          style={{ bottom: "calc(0.75rem + env(safe-area-inset-bottom))" }}
         >
           {t("nav.cta")}
-          <ArrowRight className="h-4 w-4 rtl:rotate-180" />
+          <ArrowRight className="h-3.5 w-3.5 rtl:rotate-180" />
         </Link>
       )}
     </header>

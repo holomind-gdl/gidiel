@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useIsMobile } from "@/hooks/useIsMobile";
 
 export default function ServiceCard({
   title,
@@ -16,12 +17,14 @@ export default function ServiceCard({
   learnMore?: string;
   index?: number;
 }) {
+  const isMobile = useIsMobile();
+
   return (
     <motion.article
-      initial={{ opacity: 0, y: 20 }}
+      initial={isMobile ? { opacity: 0 } : { opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.5, delay: index * 0.08 }}
+      transition={{ duration: isMobile ? 0.3 : 0.5, delay: isMobile ? 0 : index * 0.08 }}
       className="service-card-glow group relative rounded-2xl bg-white p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-rose-200/50"
       onMouseMove={(e) => {
         const rect = e.currentTarget.getBoundingClientRect();

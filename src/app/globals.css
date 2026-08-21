@@ -404,3 +404,11 @@ html[data-theme="dark"] .text-ink-300 { color: #806e5d; }
   html:not([data-theme]) .text-ink-400 { color: #b09c87; }
   html:not([data-theme]) .text-ink-300 { color: #806e5d; }
 }
+
+/* Mobile: disable continuous animations to prevent jitter */
+@media (max-width: 640px) {
+  .animate-marquee,
+  .animate-float {
+    animation: none !important;
+  }
+}
