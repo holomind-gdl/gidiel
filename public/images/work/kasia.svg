@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e67d71"/>
+      <stop offset="100%" stop-color="#ddbd6e"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.9">
+    <!-- Globe/world outline -->
+    <circle cx="300" cy="200" r="100"/>
+    <!-- Latitude lines -->
+    <ellipse cx="300" cy="200" rx="100" ry="35"/>
+    <ellipse cx="300" cy="200" rx="100" ry="70"/>
+    <!-- Longitude lines -->
+    <line x1="300" y1="100" x2="300" y2="300"/>
+    <path d="M200 200 Q300 160 400 200 Q300 240 200 200"/>
+    <!-- Location markers -->
+    <circle cx="260" cy="180" r="6"/>
+    <circle cx="340" cy="220" r="6"/>
+    <line x1="260" y1="180" x2="340" y2="220" stroke-dasharray="4 4"/>
+  </g>
+  <g fill="#d85a4b" opacity="0.6">
+    <circle cx="260" cy="180" r="3"/>
+    <circle cx="340" cy="220" r="3"/>
+  </g>
+</svg>

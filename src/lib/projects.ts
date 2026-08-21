@@ -34,7 +34,7 @@ export interface Project {
 export const projects: Project[] = [
   {
     slug: "maison-rouge-spring-lip-drop",
-    image: "/images/work/maison-rouge.jpg",
+    image: "/images/work/maison-rouge.svg",
     categoryKey: "work.categories.launch",
     year: "2025",
     client: "Maison Rouge",
@@ -115,7 +115,7 @@ export const projects: Project[] = [
   },
   {
     slug: "aurora-skin-counter-revival",
-    image: "/images/work/aurora-skin.jpg",
+    image: "/images/work/aurora-skin.svg",
     categoryKey: "work.categories.activation",
     year: "2025",
     client: "Aurora Skin",
@@ -196,7 +196,7 @@ export const projects: Project[] = [
   },
   {
     slug: "velvete-50-creator-wave",
-    image: "/images/work/velvete.jpg",
+    image: "/images/work/velvete.svg",
     categoryKey: "work.categories.influencer",
     year: "2024",
     client: "Velveté",
@@ -277,7 +277,7 @@ export const projects: Project[] = [
   },
   {
     slug: "noir-beaute-editorial-film",
-    image: "/images/work/noir-beaute.jpg",
+    image: "/images/work/noir-beaute.svg",
     categoryKey: "work.categories.content",
     year: "2024",
     client: "Noir Beauté",
@@ -343,7 +343,7 @@ export const projects: Project[] = [
   },
   {
     slug: "kasia-israel-market-entry",
-    image: "/images/work/kasia.jpg",
+    image: "/images/work/kasia.svg",
     categoryKey: "work.categories.importExport",
     year: "2025",
     client: "Kasia",
@@ -409,7 +409,7 @@ export const projects: Project[] = [
   },
   {
     slug: "opalence-private-label-skincare",
-    image: "/images/work/opalence.jpg",
+    image: "/images/work/opalence.svg",
     categoryKey: "work.categories.turnkeyBrand",
     year: "2025",
     client: "Opalence",

@@ -103,7 +103,7 @@ export default function Hero() {
             <motion.div style={{ y: imageY }} className="relative">
               <div className="relative z-10">
                 <Image
-                  src="/images/hero/model.jpg"
+                  src="/images/hero/model.svg"
                   alt="Model wearing bold cosmetics"
                   width={600}
                   height={750}
@@ -113,7 +113,7 @@ export default function Hero() {
               </div>
               <div className="hidden sm:block absolute -bottom-6 -start-6 z-20">
                 <Image
-                  src="/images/hero/lipstick.jpg"
+                  src="/images/hero/lipstick.svg"
                   alt="Pink lipstick on vanity"
                   width={200}
                   height={200}

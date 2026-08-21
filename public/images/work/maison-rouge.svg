@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e67d71"/>
+      <stop offset="100%" stop-color="#ddbd6e"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.9">
+    <!-- Abstract product drop/lip shape -->
+    <path d="M300 80 Q380 120 380 200 Q380 280 300 320 Q220 280 220 200 Q220 120 300 80"/>
+    <!-- Inner contour -->
+    <path d="M300 120 Q340 150 340 200 Q340 250 300 280 Q260 250 260 200 Q260 150 300 120"/>
+    <!-- Accent lines -->
+    <line x1="300" y1="80" x2="300" y2="320"/>
+    <path d="M220 200 Q300 240 380 200"/>
+  </g>
+  <circle cx="300" cy="200" r="6" fill="#d85a4b" opacity="0.6"/>
+</svg>

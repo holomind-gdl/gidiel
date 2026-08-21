@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e67d71"/>
+      <stop offset="100%" stop-color="#ddbd6e"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.9">
+    <!-- Wave/ripple shapes -->
+    <path d="M100 200 Q200 120 300 200 Q400 280 500 200"/>
+    <path d="M120 200 Q220 140 300 200 Q380 260 480 200"/>
+    <path d="M140 200 Q240 160 300 200 Q360 240 460 200"/>
+    <!-- Center focal point -->
+    <circle cx="300" cy="200" r="20"/>
+    <circle cx="300" cy="200" r="8"/>
+  </g>
+  <circle cx="300" cy="200" r="4" fill="#d85a4b" opacity="0.6"/>
+</svg>

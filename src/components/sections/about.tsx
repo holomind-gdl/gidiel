@@ -20,7 +20,7 @@ export default function About() {
           className="relative"
         >
           <Image
-            src="/images/about/retail.jpg"
+            src="/images/about/retail.svg"
             alt="Modern beauty retail interior"
             width={600}
             height={450}

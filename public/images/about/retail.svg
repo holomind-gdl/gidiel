@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ddbd6e"/>
+      <stop offset="100%" stop-color="#e67d71"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.9">
+    <!-- Storefront outline -->
+    <rect x="100" y="120" width="400" height="250" rx="2"/>
+    <!-- Roof/awning -->
+    <path d="M80 120 L520 120 L540 90 L60 90 Z"/>
+    <!-- Windows -->
+    <rect x="140" y="160" width="100" height="120"/>
+    <rect x="360" y="160" width="100" height="120"/>
+    <!-- Door -->
+    <rect x="250" y="200" width="100" height="170"/>
+    <line x1="300" y1="200" x2="300" y2="370"/>
+    <!-- Display shelf left -->
+    <line x1="120" y1="300" x2="240" y2="300"/>
+    <line x1="120" y1="330" x2="240" y2="330"/>
+    <!-- Display shelf right -->
+    <line x1="360" y1="300" x2="480" y2="300"/>
+    <line x1="360" y1="330" x2="480" y2="330"/>
+    <!-- Decorative elements -->
+    <circle cx="100" cy="120" r="6"/>
+    <circle cx="500" cy="120" r="6"/>
+  </g>
+  <!-- Accent dots -->
+  <g fill="#d85a4b" opacity="0.5">
+    <circle cx="300" cy="90" r="5"/>
+    <circle cx="300" cy="200" r="4"/>
+  </g>
+</svg>

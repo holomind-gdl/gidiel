@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ddbd6e"/>
+      <stop offset="100%" stop-color="#e67d71"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.9">
+    <!-- Film frame / editorial shape -->
+    <rect x="140" y="80" width="320" height="240" rx="2"/>
+    <!-- Inner frame -->
+    <rect x="170" y="110" width="260" height="180" rx="1"/>
+    <!-- Diagonal composition lines -->
+    <line x1="170" y1="290" x2="430" y2="110"/>
+    <line x1="200" y1="290" x2="430" y2="160"/>
+    <!-- Focus circles -->
+    <circle cx="300" cy="200" r="40"/>
+    <circle cx="300" cy="200" r="15"/>
+  </g>
+  <g fill="#d85a4b" opacity="0.5">
+    <circle cx="300" cy="200" r="5"/>
+  </g>
+</svg>

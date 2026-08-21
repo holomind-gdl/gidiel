@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e67d71"/>
+      <stop offset="100%" stop-color="#ddbd6e"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Lipstick body -->
+    <rect x="75" y="60" width="50" height="90" rx="4"/>
+    <!-- Lipstick tip -->
+    <path d="M75 60 Q100 40 125 60"/>
+    <!-- Cap base -->
+    <line x1="75" y1="90" x2="125" y2="90"/>
+    <!-- Decorative lines -->
+    <line x1="85" y1="100" x2="115" y2="100"/>
+    <line x1="85" y1="110" x2="115" y2="110"/>
+    <line x1="85" y1="120" x2="115" y2="120"/>
+  </g>
+  <!-- Accent -->
+  <circle cx="100" cy="45" r="4" fill="#d85a4b" opacity="0.7"/>
+</svg>

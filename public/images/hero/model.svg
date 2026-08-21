@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e67d71"/>
+      <stop offset="100%" stop-color="#ddbd6e"/>
+    </linearGradient>
+  </defs>
+  <!-- Abstract beauty silhouette -->
+  <g fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.9">
+    <!-- Head -->
+    <circle cx="300" cy="140" r="55"/>
+    <!-- Neck -->
+    <line x1="300" y1="195" x2="300" y2="240"/>
+    <!-- Shoulders and torso -->
+    <path d="M220 260 Q260 240 300 240 Q340 240 380 260 L400 420 Q300 440 200 420 Z"/>
+    <!-- Arm left -->
+    <path d="M220 270 Q180 320 160 400"/>
+    <!-- Arm right -->
+    <path d="M380 270 Q420 320 440 400"/>
+    <!-- Decorative elements - flowing lines -->
+    <path d="M200 420 Q180 500 220 580" stroke-width="1.5"/>
+    <path d="M400 420 Q420 500 380 580" stroke-width="1.5"/>
+    <!-- Body flow -->
+    <path d="M260 300 Q300 380 340 300" stroke-width="1"/>
+    <path d="M240 360 Q300 420 360 360" stroke-width="1"/>
+  </g>
+  <!-- Accent dots -->
+  <g fill="#d85a4b" opacity="0.6">
+    <circle cx="300" cy="140" r="4"/>
+    <circle cx="300" cy="240" r="3"/>
+    <circle cx="200" cy="420" r="3"/>
+    <circle cx="400" cy="420" r="3"/>
+  </g>
+</svg>

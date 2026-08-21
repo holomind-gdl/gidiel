@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400">
+  <defs>
+    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ddbd6e"/>
+      <stop offset="100%" stop-color="#e67d71"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#grad)" stroke-width="2" opacity="0.9">
+    <!-- Counter/activation shape -->
+    <rect x="150" y="140" width="300" height="140" rx="4"/>
+    <!-- Shelf lines -->
+    <line x1="150" y1="200" x2="450" y2="200"/>
+    <line x1="150" y1="260" x2="450" y2="260"/>
+    <!-- Product bottles -->
+    <rect x="200" y="160" width="40" height="40" rx="2"/>
+    <rect x="280" y="160" width="40" height="40" rx="2"/>
+    <rect x="360" y="160" width="40" height="40" rx="2"/>
+    <!-- Base -->
+    <line x1="120" y1="280" x2="480" y2="280"/>
+  </g>
+  <g fill="#d85a4b" opacity="0.5">
+    <circle cx="220" cy="180" r="4"/>
+    <circle cx="300" cy="180" r="4"/>
+    <circle cx="380" cy="180" r="4"/>
+  </g>
+</svg>
