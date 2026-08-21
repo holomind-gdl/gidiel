@@ -40,6 +40,7 @@ export const metadata: Metadata = {
     "GiDieL crafts unforgettable cosmetics promotion campaigns — from product launches to in-store activations that make beauty brands sell.",
   icons: {
     icon: "/favicon.svg?v=4",
+    apple: "/favicon.svg?v=4",
   },
 };
 
@@ -76,6 +77,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="manifest" href="/manifest.json" />
         <script
           dangerouslySetInnerHTML={{ __html: themeBootstrap }}
         />
