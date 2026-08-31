@@ -164,5 +164,29 @@
     ],
     "copyright": "© 2026 GiDieL Studio. כל הזכויות שמורות.",
     "locations": "פריז · מילאנו · תל אביב · ברחבי העולם"
+  },
+  "accessibility": {
+    "title": "הגדרות נגישות",
+    "toggle": "פתח תפריט נגישות",
+    "close": "סגור תפריט נגישות",
+    "panelTitle": "אפשרויות נגישות",
+    "fontSize": "גודל טקסט",
+    "contrast": "ניגודיות",
+    "contrast_normal": "רגילה",
+    "contrast_high": "גבוהה",
+    "contrast_dark": "כהה",
+    "dyslexiaFont": "גופן ידידותי לדיסלקציה",
+    "cursorSize": "גודל סמן",
+    "cursor_normal": "רגיל",
+    "cursor_large": "גדול",
+    "cursor_xlarge": "גדול מאוד",
+    "linkHighlight": "הדגש קישורים",
+    "textSpacing": "מרווח טקסט",
+    "spacing_normal": "רגיל",
+    "spacing_wide": "רחב",
+    "spacing_wider": "רחב יותר",
+    "readingGuide": "סרגל קריאה",
+    "pauseAnimations": "השהה אנימציות",
+    "reset": "אפס את כל ההגדרות"
   }
 }

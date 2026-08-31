@@ -164,5 +164,29 @@
     ],
     "copyright": "© 2026 GiDieL Studio. Все права защищены.",
     "locations": "Париж · Милан · Тель-Авив · По всему миру"
+  },
+  "accessibility": {
+    "title": "Настройки доступности",
+    "toggle": "Открыть меню доступности",
+    "close": "Закрыть меню доступности",
+    "panelTitle": "Параметры доступности",
+    "fontSize": "Размер текста",
+    "contrast": "Контрастность",
+    "contrast_normal": "Обычная",
+    "contrast_high": "Высокая",
+    "contrast_dark": "Тёмная",
+    "dyslexiaFont": "Шрифт для дислексии",
+    "cursorSize": "Размер курсора",
+    "cursor_normal": "Обычный",
+    "cursor_large": "Большой",
+    "cursor_xlarge": "Очень большой",
+    "linkHighlight": "Выделить ссылки",
+    "textSpacing": "Межстрочный интервал",
+    "spacing_normal": "Обычный",
+    "spacing_wide": "Широкий",
+    "spacing_wider": "Шире",
+    "readingGuide": "Линейка чтения",
+    "pauseAnimations": "Остановить анимации",
+    "reset": "Сбросить все настройки"
   }
 }

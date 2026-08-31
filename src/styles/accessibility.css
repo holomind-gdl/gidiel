@@ -1,0 +1,100 @@
+:root {
+  --a11y-font-size: 100%;
+}
+
+html {
+  font-size: var(--a11y-font-size);
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+[data-a11y-contrast="high"] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --primary: #ffff00;
+  --primary-foreground: #000000;
+  --border: #ffffff;
+  --muted: #333333;
+  --muted-foreground: #ffffff;
+}
+
+[data-a11y-contrast="high"] * {
+  border-color: #ffffff !important;
+}
+
+[data-a11y-contrast="dark"] {
+  filter: invert(1) hue-rotate(180deg);
+}
+
+[data-a11y-dyslexia="true"] {
+  font-family: "OpenDyslexic", "Comic Sans MS", sans-serif !important;
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+}
+
+[data-a11y-cursor="large"] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Cpath fill='%23000' stroke='%23fff' stroke-width='2' d='M16 2 L16 30 M2 16 L30 16'/%3E%3C/svg%3E")
+    16 16,
+    auto;
+}
+
+[data-a11y-cursor="xlarge"] {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' viewBox='0 0 48 48'%3E%3Cpath fill='%23000' stroke='%23fff' stroke-width='3' d='M24 2 L24 46 M2 24 L46 24'/%3E%3C/svg%3E")
+    24 24,
+    auto;
+}
+
+[data-a11y-links="true"] a {
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 3px;
+}
+
+[data-a11y-spacing="wide"] {
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+[data-a11y-spacing="wider"] {
+  letter-spacing: 0.1em;
+  word-spacing: 0.2em;
+  line-height: 2;
+}
+
+[data-a11y-animations="true"] *,
+[data-a11y-animations="true"] *::before,
+[data-a11y-animations="true"] *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+
+:focus-visible {
+  outline: 3px solid hsl(var(--primary));
+  outline-offset: 2px;
+}
+
+.reading-guide {
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: hsl(var(--primary));
+  pointer-events: none;
+  z-index: 9997;
+}

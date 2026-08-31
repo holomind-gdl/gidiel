@@ -18,7 +18,7 @@ export default function Home() {
     <div id="top">
       <AnimatedOrbs />
       <Navbar />
-      <main>
+      <main id="main-content">
         <Hero />
         <TrustBadges />
         <BrandMarquee />

@@ -4,11 +4,14 @@ import {
   Nunito,
   Heebo,
 } from "next/font/google";
-import { MotionConfig } from "framer-motion";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { AccessibilityProvider } from "@/context/AccessibilityContext";
+import { MotionConfigWrapper } from "@/components/MotionConfigWrapper";
+import { AccessibilityWidget } from "@/components/accessibility/AccessibilityWidget";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import "./globals.css";
+import "@/styles/accessibility.css";
 
 const geist = Geist({
   variable: "--font-geist",
@@ -83,12 +86,15 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col">
-        <MotionConfig reducedMotion="user">
-          <ScrollProgress />
-          <ThemeProvider>
-            <LanguageProvider>{children}</LanguageProvider>
-          </ThemeProvider>
-        </MotionConfig>
+        <AccessibilityProvider>
+          <MotionConfigWrapper>
+            <ScrollProgress />
+            <ThemeProvider>
+              <LanguageProvider>{children}</LanguageProvider>
+            </ThemeProvider>
+          </MotionConfigWrapper>
+          <AccessibilityWidget />
+        </AccessibilityProvider>
       </body>
     </html>
   );

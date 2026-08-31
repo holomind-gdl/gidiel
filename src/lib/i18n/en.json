@@ -164,5 +164,29 @@
     ],
     "copyright": "© 2026 GiDieL Studio. All rights reserved.",
     "locations": "Paris · Milan · Tel Aviv · Worldwide"
+  },
+  "accessibility": {
+    "title": "Accessibility Settings",
+    "toggle": "Open accessibility menu",
+    "close": "Close accessibility menu",
+    "panelTitle": "Accessibility Options",
+    "fontSize": "Text Size",
+    "contrast": "Contrast",
+    "contrast_normal": "Normal",
+    "contrast_high": "High",
+    "contrast_dark": "Dark",
+    "dyslexiaFont": "Dyslexia-friendly font",
+    "cursorSize": "Cursor Size",
+    "cursor_normal": "Normal",
+    "cursor_large": "Large",
+    "cursor_xlarge": "Extra Large",
+    "linkHighlight": "Highlight Links",
+    "textSpacing": "Text Spacing",
+    "spacing_normal": "Normal",
+    "spacing_wide": "Wide",
+    "spacing_wider": "Wider",
+    "readingGuide": "Reading Guide",
+    "pauseAnimations": "Pause Animations",
+    "reset": "Reset All Settings"
   }
 }

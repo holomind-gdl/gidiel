@@ -41,7 +41,6 @@ export default function Footer() {
                 href={item.abbr === "IG" ? "https://instagram.com" : "https://linkedin.com"}
                 target="_blank"
                 rel="noreferrer"
-                aria-label={item.label}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-600 transition-colors hover:border-rose-400 hover:text-rose-500"
               >
                 <span className="text-xs font-semibold">
@@ -60,7 +59,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-base font-semibold text-ink-900 mb-4 tracking-tight">{t("footer.servicesHeader")}</h4>
+          <div className="text-base font-semibold text-ink-900 mb-4 tracking-tight">
+            <p>{t("footer.servicesHeader")}</p>
+          </div>
           <ul className="space-y-3">
             {services.map((item) => (
               <li key={item}>
@@ -76,7 +77,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-base font-semibold text-ink-900 mb-4 tracking-tight">{t("footer.companyHeader")}</h4>
+          <div className="text-base font-semibold text-ink-900 mb-4 tracking-tight">
+            <p>{t("footer.companyHeader")}</p>
+          </div>
           <ul className="space-y-3">
             {company.map((item, i) => (
               <li key={item}>
@@ -92,7 +95,9 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="text-base font-semibold text-ink-900 mb-4 tracking-tight">{t("footer.connectHeader")}</h4>
+          <div className="text-base font-semibold text-ink-900 mb-4 tracking-tight">
+            <p>{t("footer.connectHeader")}</p>
+          </div>
           <ul className="space-y-3">
             {connectRaw.map((item) => (
               <li key={item.label}>
