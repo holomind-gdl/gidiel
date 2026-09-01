@@ -1,11 +1,14 @@
 "use client";
 
 import { useAccessibility } from "@/context/AccessibilityContext";
-import { useTranslation } from "@/context/LanguageContext";
 
-export function FloatingButton() {
+interface FloatingButtonProps {
+  t: (key: string) => string;
+  dir: "ltr" | "rtl";
+}
+
+export function FloatingButton({ t, dir }: FloatingButtonProps) {
   const { setIsOpen, isOpen, settings } = useAccessibility();
-  const { t, dir } = useTranslation();
 
   const hasActiveSettings = Object.entries(settings).some(([key, value]) => {
     if (key === "fontSize") return value !== 100;

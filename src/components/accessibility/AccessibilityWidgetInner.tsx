@@ -1,12 +1,14 @@
 "use client";
 
 import { useAccessibility } from "@/context/AccessibilityContext";
+import { useTranslation } from "@/context/LanguageContext";
 import { FloatingButton } from "./FloatingButton";
 import { AccessibilityPanel } from "./AccessibilityPanel";
 import { ReadingGuide } from "./ReadingGuide";
 
 export function AccessibilityWidgetInner() {
   const { isOpen, settings } = useAccessibility();
+  const { t, dir } = useTranslation();
 
   return (
     <>
@@ -17,9 +19,9 @@ export function AccessibilityWidgetInner() {
         Skip to main content
       </a>
 
-      <FloatingButton />
+      <FloatingButton t={t} dir={dir} />
 
-      {isOpen && <AccessibilityPanel />}
+      {isOpen && <AccessibilityPanel t={t} dir={dir} />}
 
       {settings.readingGuide && <ReadingGuide />}
     </>

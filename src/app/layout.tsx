@@ -90,10 +90,12 @@ export default function RootLayout({
           <MotionConfigWrapper>
             <ScrollProgress />
             <ThemeProvider>
-              <LanguageProvider>{children}</LanguageProvider>
+              <LanguageProvider>
+                <AccessibilityWidget />
+                {children}
+              </LanguageProvider>
             </ThemeProvider>
           </MotionConfigWrapper>
-          <AccessibilityWidget />
         </AccessibilityProvider>
       </body>
     </html>

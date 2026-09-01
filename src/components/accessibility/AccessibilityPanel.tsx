@@ -1,13 +1,16 @@
 "use client";
 
 import { useAccessibility } from "@/context/AccessibilityContext";
-import { useTranslation } from "@/context/LanguageContext";
 import { useEffect, useRef, useCallback } from "react";
 
-export function AccessibilityPanel() {
+interface AccessibilityPanelProps {
+  t: (key: string) => string;
+  dir: "ltr" | "rtl";
+}
+
+export function AccessibilityPanel({ t, dir }: AccessibilityPanelProps) {
   const { settings, updateSetting, resetSettings, setIsOpen } =
     useAccessibility();
-  const { t, dir } = useTranslation();
   const panelRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
