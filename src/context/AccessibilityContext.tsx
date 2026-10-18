@@ -68,7 +68,10 @@ export function AccessibilityProvider({
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    setSettings(readStoredSettings());
+    const frame = window.requestAnimationFrame(() => {
+      setSettings(readStoredSettings());
+    });
+    return () => window.cancelAnimationFrame(frame);
   }, []);
 
   useEffect(() => {

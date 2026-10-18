@@ -19,8 +19,7 @@ export default function Footer() {
   const connectHref = (item: {label: string; abbr?: string; icon?: string}) => {
     if (item.icon === "mail") return "mailto:hello@gidiel.studio";
     if (item.icon === "map") return "/#contact";
-    if (item.abbr === "IG") return "https://instagram.com";
-    if (item.abbr === "LI") return "https://linkedin.com";
+    if (item.abbr === "IG" || item.abbr === "LI") return "/#contact";
     return "/#contact";
   };
 
@@ -36,17 +35,16 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4">
             {connectRaw.slice(0, 2).map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.abbr === "IG" ? "https://instagram.com" : "https://linkedin.com"}
-                target="_blank"
-                rel="noreferrer"
+                href="/#contact"
+                aria-label={item.label}
                 className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-600 transition-colors hover:border-rose-400 hover:text-rose-500"
               >
                 <span className="text-xs font-semibold">
                   {item.abbr}
                 </span>
-              </a>
+              </Link>
             ))}
             <a
               href="mailto:hello@gidiel.studio"

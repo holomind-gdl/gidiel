@@ -11,10 +11,13 @@ export function useIsMobile(breakpoint = 768) {
   useEffect(() => {
     if (typeof window === "undefined") return;
     const mq = window.matchMedia(`(max-width: ${breakpoint - 1}px)`);
-    setIsMobile(mq.matches);
+    const frame = window.requestAnimationFrame(() => setIsMobile(mq.matches));
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
     mq.addEventListener("change", handler);
-    return () => mq.removeEventListener("change", handler);
+    return () => {
+      window.cancelAnimationFrame(frame);
+      mq.removeEventListener("change", handler);
+    };
   }, [breakpoint]);
 
   return isMobile;
